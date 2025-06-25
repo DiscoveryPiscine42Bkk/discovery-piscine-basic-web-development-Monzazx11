@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.parallax1 {
+    background-image: url('https://s359.kapook.com/pagebuilder/87ab33ae-8dca-487d-ac86-779086de65e0.jpg'); 
+}
+
+.parallax2 {
+    background-image: url('https://cdn.pixabay.com/photo/2022/01/26/13/53/mountain-6968913_1280.jpg');
+}
+
+.content {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
