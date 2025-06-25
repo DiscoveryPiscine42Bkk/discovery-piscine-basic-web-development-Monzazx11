@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Responsive Table</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+            table-layout: fixed; /* ทำให้ตารางยืดหดตามขนาดเท่ากัน */
+        }
+        td {
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 5vw; /* ขนาดตัวอักษรปรับตามความกว้างของหน้าจอ */
+            font-family: Arial, sans-serif;
+            word-wrap: break-word; /* ถ้าข้อความยาวจะตัดบรรทัด */
+        }
+        .cell1 {
+            background-color: #add8e6; /* สีฟ้า */
+        }
+        .cell2 {
+            background-color: #ffb6c1; /* สีชมพู */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td class="cell1">dare</td>
+            <td class="cell2">true</td>
+        </tr>
+    </table>
+
+</body>
+</html>
