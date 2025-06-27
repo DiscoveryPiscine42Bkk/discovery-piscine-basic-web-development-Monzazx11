@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<button id="changeColor">Click Me!</button>
+<script>
+    $(function () {
+        $('#changeColor').click(function () {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            $('body').css('background-color', randomColor);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<input type="text" id="left">
+<select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+</select>
+<input type="text" id="right">
+<input type="submit" id="tryMe" value="Try me!">
+
+<script>
+    $(function () {
+        $('#tryMe').click(function () {
+            let left = $('#left').val().trim();
+            let right = $('#right').val().trim();
+            let operator = $('#operator').val();
+
+            if (!/^\d+$/.test(left) || !/^\d+$/.test(right)) {
+                alert('Error :(');
+                return;
+            }
+
+            let num1 = parseInt(left);
+            let num2 = parseInt(right);
+
+            if ((operator === '/' || operator === '%') && num2 === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch (operator) {
+                case '+': result = num1 + num2; break;
+                case '-': result = num1 - num2; break;
+                case '*': result = num1 * num2; break;
+                case '/': result = num1 / num2; break;
+                case '%': result = num1 % num2; break;
+            }
+
+            alert('Result: ' + result);
+            console.log('Result: ' + result);
+        });
+
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    });
+</script>
+
+</body>
+</html>
